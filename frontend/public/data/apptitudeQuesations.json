@@ -1,0 +1,42 @@
+[
+    {
+        "quesation": "What is the capital of India?",
+        "options": [
+            "Delhi",
+            "Mumbai",
+            "Kolkata",
+            "Chennai"
+        ],
+        "answer": "Delhi"
+    },
+    {
+        "quesation": "What is the capital of Maharashtra?",
+        "options": [
+            "Delhi",
+            "Mumbai",
+            "Kolkata",
+            "Chennai"
+        ],
+        "answer": "Mumbai"
+    },
+    {
+        "quesation": "What is the capital of West Bengal?",
+        "options": [
+            "Delhi",
+            "Mumbai",
+            "Kolkata",
+            "Chennai"
+        ],
+        "answer": "Kolkata"
+    },
+    {
+        "quesation": "What is the capital of Tamil Nadu?",
+        "options": [
+            "Delhi",
+            "Mumbai",
+            "Kolkata",
+            "Chennai"
+        ],
+        "answer": "Chennai"
+    }
+]
