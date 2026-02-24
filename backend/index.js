@@ -16,7 +16,10 @@ const mongoURI = process.env.MONGODB_URI;
 
 // middlewares
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: process.env.FRONTEND_URL || "https://interview-prep-hub-1-lgd5.onrender.com",
+    credentials: true
+}));
 
 // db config
 mongoose.connect(mongoURI)
@@ -29,15 +32,15 @@ app.get("/", (req, res) => res.status(200).send("hello world"));
 app.get("/findUserByEnrollment/:enrollment", async (req, res) => {
     const enrollment = req.params.enrollment;
     try {
-        const user = await User.findOne({ enrollnmentNo: enrollment });  
+        const user = await User.findOne({ enrollnmentNo: enrollment });
         if (user) {
-            res.status(200).json(user); 
+            res.status(200).json(user);
         } else {
-            res.status(404).send("User not found"); 
+            res.status(404).send("User not found");
         }
     } catch (err) {
-        console.error('Error occurred:', err); 
-        res.status(500).send("Connection error"); 
+        console.error('Error occurred:', err);
+        res.status(500).send("Connection error");
     }
 });
 
